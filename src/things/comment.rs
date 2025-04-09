@@ -325,7 +325,7 @@ pub async fn list(client: &Client, config: &Config) -> impl Stream<Item = Commen
         "?sort=top&limit=100".to_string()
     };
 
-    let uri = format!("https://reddit.com/user/{username}/comments.json{query_params}");
+    let uri = format!("https://reddit.com/user/{username}/overview.json");
 
             let res: Response = client
         .get(&uri)
